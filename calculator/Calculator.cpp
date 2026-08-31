@@ -41,6 +41,35 @@ class Calculator
         //substract
         float substractNumbers()
         {
+            float aux;
+            if(num2 < num1)
+            {
+                aux = num1;
+                num1 = num2;
+                num2 = aux;
+            } 
             return num1 - num2;
+        }
+
+        float multiplyValues()
+        {
+            return num1 * num2;
+        }
+
+        float round(float var)
+        {
+            //multiply by 100
+            //split by 100
+            float value = (int)(var * 100);
+            return (float)value / 100;
+        }
+
+        float splitValues()
+        {
+            if(num1 == 0 || num2 == 0)
+                throw runtime_error("No se uede dividir entre 0"); 
+            
+            //return round(num1 / num2);
+            return num1 / num2;
         }
 };
