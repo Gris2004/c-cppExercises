@@ -25,17 +25,27 @@ class Calculator
         float getNum1() { return num1; }
         float getNum2() { return num2; }
 
-        //prin values
+        //print values
         void printValues()
         {
             cout<<num1<<endl;
             cout<<num2<<endl;
         }
 
+	//round float for two decimals
+        float round(float var)
+        {
+            //multiply by 100
+            //split by 100
+            float value = (int)(var * 100);
+            return (float)value / 100;
+        }
+	
+
         //add
         float addValues()
         {
-            return num1 + num2;
+            return round(num1 + num2);
         }
 
         //substract
@@ -48,20 +58,12 @@ class Calculator
                 num1 = num2;
                 num2 = aux;
             } 
-            return num1 - num2;
+            return round(num1 - num2);
         }
 
         float multiplyValues()
         {
-            return num1 * num2;
-        }
-
-        float round(float var)
-        {
-            //multiply by 100
-            //split by 100
-            float value = (int)(var * 100);
-            return (float)value / 100;
+            return round(num1 * num2);
         }
 
         float splitValues()
@@ -69,7 +71,6 @@ class Calculator
             if(num1 == 0 || num2 == 0)
                 throw runtime_error("No se uede dividir entre 0"); 
             
-            //return round(num1 / num2);
-            return num1 / num2;
+            return round(num1 / num2);
         }
 };
