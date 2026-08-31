@@ -7,7 +7,7 @@ int main()
 {
     Calculator calc(11, 14);
     calc.printValues();
-    cout<< fixed << calc.splitValues() << endl;
+    cout<< calc.splitValues() << endl;
 
     return 0;
 }

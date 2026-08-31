@@ -1,6 +1,6 @@
 # Exercises
 ## Calculator
-**c++**
+**c++ - CMake**
 - takes 2 numbers by keyboard
 - realize the next operations
     - add
