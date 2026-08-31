@@ -31,4 +31,16 @@ class Calculator
             cout<<num1<<endl;
             cout<<num2<<endl;
         }
+
+        //add
+        float addValues()
+        {
+            return num1 + num2;
+        }
+
+        //substract
+        float substractNumbers()
+        {
+            return num1 - num2;
+        }
 };
