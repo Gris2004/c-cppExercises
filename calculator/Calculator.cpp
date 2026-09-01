@@ -7,24 +7,24 @@ using namespace std;
 class Calculator
 {
     private:
-        float num1, num2;
+        double num1, num2;
 
     public:
         //constructors
         Calculator(){}
-        Calculator(float n1, float n2)
+        Calculator(double n1, double n2)
         {
             num1 = n1;
             num2 = n2;
         }
         
         //setters
-        void setNum1(float n1) { num1 = n1; }
-        void setNum2(float n2) { num2 = n2; }
+        void setNum1(double n1) { num1 = n1; }
+        void setNum2(double n2) { num2 = n2; }
         
         //getters
-        float getNum1() { return num1; }
-        float getNum2() { return num2; }
+        double getNum1() { return num1; }
+        double getNum2() { return num2; }
 
         //print values
         void printValues()
@@ -34,59 +34,59 @@ class Calculator
         }
 
 	//round float for two decimals
-        float round2(float var)
+        double round2(double var)
         {
             //multiply by 100
             //split by 100
-            float value = (int)(var * 100);
-            return (float)value / 100;
+            double value = (int)(var * 100);
+            return (double)value / 100;
         }
 	
 
         //add
-        float addValues()
+        double addValues()
         {
-            float add = num1 + num2;
+            double add = num1 + num2;
             return round2(add);
         }
 
         //substract
-        float substractNumbers()
+        double substractNumbers()
         {
-            float substract = num1 - num2;
+            double substract = num1 - num2;
             return round2(substract);
         }
 
-        float multiplyValues()
+        double multiplyValues()
         {
-            float multiply = num1 * num2;
+            double multiply = num1 * num2;
             return round2(multiply);
         }
 
-        float splitValues()
+        double splitValues()
         {
             if(num1 == 0 || num2 == 0)
                 throw runtime_error("No se uede dividir entre 0"); 
             
-            float split = num1 / num2;
+            double split = num1 / num2;
 
             return round2(split);
         }
 
-	array<float, 2> squareRoot()
+	array<double, 2> squareRoot()
 	{
 	    if (num1 < 0 || num2 < 0)
 	        throw runtime_error("no se puede calcular la raiz cuadrada de numeros negativos");
 	    
-        float sqrt1 = sqrt(num1);
-        float sqrt2 = sqrt(num2);
+        double sqrt1 = sqrt(num1);
+        double sqrt2 = sqrt(num2);
 
 	    return {round2(sqrt1), round2(sqrt2)};
 	}
 
-    float exponentiation()
+    double exponentiation()
     {
-        float exp = pow(num1, num2);
+        double exp = pow(num1, num2);
         return round2(exp);
     }
 };

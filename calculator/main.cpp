@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     string option;
-    float n1, n2;
+    double n1, n2;
     Calculator calc;
 
     while (true)
@@ -34,43 +34,45 @@ int main()
             cout << "Resultado: " << calc.addValues() << endl;
         }
 
-        if(option == "2")
+        else if(option == "2")
         {
             cout << "===RESTA===" << endl;
             cout << "Resultado: " << calc.substractNumbers() << endl;
         }
 
-        if(option == "3")
+        else if(option == "3")
         {
             cout << "===MULTIPLICACION===" << endl;
             cout << "Resultado: " << calc.multiplyValues() << endl;
         }
 
-        if(option == "4")
+        else if(option == "4")
         {
             cout << "===DIVISION===" << endl;
             cout << "Resultado: " << calc.splitValues() << endl;
         }
 
-        if(option == "5")
+        else if(option == "5")
         {
             cout << "===RAIZ CUADRADA===" << endl;
             cout << "Numero 1: " << calc.squareRoot()[1] << endl;
             cout << "Numero 2: " << calc.squareRoot()[2] << endl;
         }
 
-        if(option == "6")
+        else if(option == "6")
         {
             cout << "===EXPONENCIACION===" << endl;
             cout << "Resultado: " << calc.exponentiation() << endl;
         }
 
-        if(option == "7")
+        else if(option == "7")
         {
             cout<< "Hasta luego!" << endl;
             break;
         }
+        
+        else
+            cout << "Opcion no valida" << endl;
     }
-
     return 0;
 }
