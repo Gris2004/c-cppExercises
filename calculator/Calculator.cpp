@@ -19,8 +19,8 @@ class Calculator
         }
         
         //setters
-        void setnum1(float n1) { num1 = n1; }
-        void setnum2(float n2) { num2 = n2; }
+        void setNum1(float n1) { num1 = n1; }
+        void setNum2(float n2) { num2 = n2; }
         
         //getters
         float getNum1() { return num1; }
@@ -83,5 +83,8 @@ class Calculator
 	    return {round2(sqrt(num1)), round2(sqrt(num2))};
 	}
 
-	
+    float exponentiation()
+    {
+        return pow(num1, num2);
+    }
 };
