@@ -46,25 +46,21 @@ class Calculator
         //add
         float addValues()
         {
-            return round2(num1 + num2);
+            float add = num1 + num2;
+            return round2(add);
         }
 
         //substract
         float substractNumbers()
         {
-            float aux;
-            if(num2 < num1)
-            {
-                aux = num1;
-                num1 = num2;
-                num2 = aux;
-            } 
-            return round2(num1 - num2);
+            float substract = num1 - num2;
+            return round2(substract);
         }
 
         float multiplyValues()
         {
-            return round2(num1 * num2);
+            float multiply = num1 * num2;
+            return round2(multiply);
         }
 
         float splitValues()
@@ -72,7 +68,9 @@ class Calculator
             if(num1 == 0 || num2 == 0)
                 throw runtime_error("No se uede dividir entre 0"); 
             
-            return round2(num1 / num2);
+            float split = num1 / num2;
+
+            return round2(split);
         }
 
 	array<float, 2> squareRoot()
@@ -80,11 +78,15 @@ class Calculator
 	    if (num1 < 0 || num2 < 0)
 	        throw runtime_error("no se puede calcular la raiz cuadrada de numeros negativos");
 	    
-	    return {round2(sqrt(num1)), round2(sqrt(num2))};
+        float sqrt1 = sqrt(num1);
+        float sqrt2 = sqrt(num2);
+
+	    return {round2(sqrt1), round2(sqrt2)};
 	}
 
     float exponentiation()
     {
-        return pow(num1, num2);
+        float exp = pow(num1, num2);
+        return round2(exp);
     }
 };
