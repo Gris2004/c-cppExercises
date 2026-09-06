@@ -3,17 +3,20 @@
 
 #include <stdio.h>
 
-//fibonacci
-int fibonacci[](int var)
+void fibonacci(int var)
 {
-    int acum = 0;
-    int array[var];
-    for(int x = 0; x < var; x++)
+    int a = 0;
+    int b = 1;
+    int c;
+
+    for(int x = 1; x <= var; x++)
     {
-        acum = acum + x;
-        array[x] = acum;
-    }
-    return array;
+        c = a + b;
+        a = b;
+        b = c;
+
+        printf("%d \n", c);
+    } 
 }
 
 #endif
