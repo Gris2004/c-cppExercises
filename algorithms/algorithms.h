@@ -21,6 +21,7 @@ void fibonacci(int var)
     }
 }
 
+//check if the number is prime or no
 //param: int { int } var - range for the prime numbers
 void primeNumbers(int var)
 {
@@ -46,6 +47,20 @@ void primeNumbers(int var)
     }
 
     if(isPrime) printf("number: %d is prime", var);
+}
+
+//makes a pyramind with a rage number
+//param: var - range for the pyramind
+void pyramind(int var)
+{
+    for(int x = 0; x <= var; x++)
+    {
+        for(int y = 0; y < x; y++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
 }
 
 #endif
