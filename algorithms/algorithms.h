@@ -2,7 +2,7 @@
 #define ALGORITHMS_H
 
 #include <stdio.h>
-#include <errno.h>
+#include <stdbool.h>
 
 //param: { int } var - range for the fibonacci
 void fibonacci(int var)
@@ -24,27 +24,28 @@ void fibonacci(int var)
 //param: int { int } var - range for the prime numbers
 void primeNumbers(int var)
 {
-    int countPrimes;
+    if(var < 2)
+    {
+        printf("1 y menores no son primos");
+        return;
+    }
+
+    bool isPrime = false;
     float quotient;
 
-    if(var < 2)
-        perror("no se aceptan valores menores a 2");
-
-    for(int x = 2; x <= var; x++)
+    for(int x = 2; x < var; x++)
     {
-        for(int y = 2; y <= var; y++)
+        quotient = var % x;
+        if(quotient != 0) isPrime = true;
+        if(quotient == 0)
         {
-            quotient = var % y;
-            if( y != var)
-            {
-                if(quotient != 0)
-                {
-                    printf("numero: %d es primo", x);
-                    countPrimes++;
-                }
-            }
+            isPrime = false;
+            printf("number isn't prime");
+            break;
         }
     }
+
+    if(isPrime) printf("number: %d is prime", var);
 }
 
 #endif

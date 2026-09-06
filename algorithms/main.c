@@ -3,6 +3,6 @@
 int main()
 {
     fibonacci(8);
-    primeNumbers(2);
+    primeNumbers(14);
     return 0;
 }
