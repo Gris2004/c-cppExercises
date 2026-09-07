@@ -41,12 +41,21 @@ void primeNumbers(int var)
         if(quotient == 0)
         {
             isPrime = false;
-            printf("number isn't prime");
+            printf("number: %d isn't prime", var);
             break;
         }
     }
 
     if(isPrime) printf("number: %d is prime", var);
+}
+
+//takes a string and revers the array for know if the value is a palindrome
+void palindrome(char var[])
+{
+    for(int x = 0; < var.length;  x++)
+    {
+        printf("%d \n", x);
+    }
 }
 
 //makes a pyramind with a rage number
