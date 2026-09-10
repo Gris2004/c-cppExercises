@@ -1,6 +1,7 @@
 #ifndef ALGORITHMS_H
 #define ALGORITHMS_H
 
+#include <string.h>
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -52,10 +53,32 @@ void primeNumbers(int var)
 //takes a string and revers the array for know if the value is a palindrome
 void palindrome(char var[])
 {
-    for(int x = 0; < var.length;  x++)
+    int length = strlen(var);
+    char reverseString[length];
+    bool palindrome = false;
+    bool isPalindrome = true;
+
+    for(int x = 1; x <= length; x++)
     {
-        printf("%d \n", x);
+        reverseString[x] = var[length - x];
+        printf("\n%c: ", reverseString[x]);
+        printf("%c: ", var[x - 1]);
+
+        if(reverseString[x] == var[x - 1])
+        {
+            printf("correct!");
+            palindrome = true;
+        } else
+        {
+            printf("incorrect!");
+            palindrome = false;
+            isPalindrome = false;
+        }
     }
+    if(isPalindrome)
+        printf("\nis a palindrome");
+    else
+        printf("\nisn't a palindrome");
 }
 
 //makes a pyramind with a rage number

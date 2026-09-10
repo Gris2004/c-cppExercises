@@ -5,6 +5,6 @@ int main()
     fibonacci(8);
     primeNumbers(14);
     pyramind(12);
-    palindrome("hola");
+    palindrome("amor");
     return 0;
 }
