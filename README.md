@@ -26,3 +26,9 @@
             - split----------------|
             - square root----------|
             - exponentiation-------|
+
+## Algorithms (Written in C)
+- fibonacci
+- prime numbers
+- pyramind
+- palindrome
