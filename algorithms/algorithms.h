@@ -28,7 +28,7 @@ void primeNumbers(int var)
 {
     if(var < 2)
     {
-        printf("1 y menores no son primos");
+        printf("1 y menores no son primos\n");
         return;
     }
 
@@ -42,12 +42,12 @@ void primeNumbers(int var)
         if(quotient == 0)
         {
             isPrime = false;
-            printf("number: %d isn't prime", var);
+            printf("number: %d isn't prime\n", var);
             break;
         }
     }
 
-    if(isPrime) printf("number: %d is prime", var);
+    if(isPrime) printf("number: %d is prime\n", var);
 }
 
 //takes a string and revers the array for know if the value is a palindrome
